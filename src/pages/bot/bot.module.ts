@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
+
 import { BotPage } from './bot';
 
 @NgModule({
@@ -9,5 +10,7 @@ import { BotPage } from './bot';
   imports: [
     IonicPageModule.forChild(BotPage),
   ],
+  providers: [
+  ]
 })
 export class BotPageModule {}

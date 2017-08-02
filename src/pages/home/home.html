@@ -14,9 +14,16 @@
 
 <ion-content padding>
   <ion-list>
-    <div style="text-align: right">
-      <button ion-button clear icon-only><ion-icon name="options"></ion-icon></button>
-    </div>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col style="font-size: medium">
+          Assign: {{assign}}
+        </ion-col>
+        <ion-col style="text-align: right">
+          <button ion-button clear icon-only (click)="showAssignDialog()"><ion-icon name="options"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
     <button ion-item *ngFor="let bot of bots" (click)="pushBotDetail()">
       <ion-icon name="contact" item-start></ion-icon>
