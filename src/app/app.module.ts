@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { BotPageModule } from '../pages/bot/bot.module';
+import { BotDetailPageModule } from '../pages/bot-detail/bot-detail.module';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    BotPageModule
+    BotPageModule,
+    BotDetailPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

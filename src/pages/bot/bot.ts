@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
+import { BotDetailPage } from '../bot-detail/bot-detail';
+
 @IonicPage()
 @Component({
   selector: 'page-bot',
@@ -20,6 +22,11 @@ export class BotPage {
     });
   }
 
+  pushBotDetailPage() {
+    console.log('push!');
+    this.navCtrl.push(BotDetailPage);
+  }
+
   sendMessage(text: string) {
     const newMessage = new Message();
     newMessage.username = 'あなた';
@@ -35,8 +42,6 @@ export class BotPage {
       this.messages.push(reply);
     });
   }
-
-  none() {}
 }
 
 class Message {

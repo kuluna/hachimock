@@ -38,7 +38,7 @@ export class HomePage {
     dialog.present();
   }
 
-  pushBotDetail() {
+  pushBotPage() {
     this.navCtrl.push(BotPage);
   }
 }

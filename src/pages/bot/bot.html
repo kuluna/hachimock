@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>あいりさん</ion-title>
+    <ion-title>あいり</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="pushBotDetailPage()">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -14,6 +19,7 @@
       {{message.time}}
     </div>
     <ng-template #partner>
+      <ion-icon name="contact" style="zoom: 2"></ion-icon>
       <div style="background-color:#ccc;border-radius: 6px;padding:8px;font-size:medium">
         {{message.text}}
       </div>
@@ -26,8 +32,9 @@
   <form #form="ngForm" (ngSubmit)="sendMessage(form.value.message)">
     <ion-toolbar>
       <ion-buttons left>
+        <a ion-button icon-only>
           <ion-icon name="add"></ion-icon>
-        
+        </a>
       </ion-buttons>
       <ion-item>
         <ion-input type="text" name="message" placeholder="Enter a message" ngModel></ion-input>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>あいり</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Cover -->
+    <ion-row align-items-center class="coverrow">
+      <ion-col style="text-align:center">
+        <div><img src="assets/images/usericon.jpg" style="width:40%;margin:16px" /></div>
+        <p style="color: white;text-shadow: 0 0 10px #333;">最近はスプラトゥーン2にものすごく興味があります。<br />でもなかなかNintendo Switchが売っていません。</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <table>
+    <tr>
+      <td>Gender</td>
+      <td>Femail</td>
+    </tr>
+    <tr>
+      <td>Country</td>
+      <td>Japan</td>
+    </tr>
+    <tr>
+      <td>Browser</td>
+      <td>Mozilla /5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B5110e Safari/601.1</td>
+    </tr>
+    <tr>
+      <td>Queries</td>
+      <td>
+        <ion-chip *ngFor="let query of queries" style="margin-right: 4px">
+          <ion-label>{{query}}</ion-label>
+        </ion-chip>
+      </td>
+    </tr>
+  </table>
+  <button ion-button full>File logs</button>
+</ion-content>

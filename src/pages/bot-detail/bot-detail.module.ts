@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-
-import { BotPage } from './bot';
+import { BotDetailPage } from './bot-detail';
 
 @NgModule({
   declarations: [
-    BotPage
+    BotDetailPage,
   ],
   imports: [
-    IonicPageModule.forChild(BotPage),
+    IonicPageModule.forChild(BotDetailPage),
   ],
-  providers: [
-  ]
 })
-export class BotPageModule {}
+export class BotDetailPageModule {}

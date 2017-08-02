@@ -25,7 +25,7 @@
       </ion-row>
     </ion-grid>
 
-    <button ion-item *ngFor="let bot of bots" (click)="pushBotDetail()">
+    <button ion-item *ngFor="let bot of bots" (click)="pushBotPage()">
       <ion-icon name="contact" item-start></ion-icon>
       <h2>{{bot.username}}</h2>
       <p>{{bot.text}}</p>
