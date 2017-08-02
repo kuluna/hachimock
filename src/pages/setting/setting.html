@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Setting</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Personal</ion-list-header>
+    <button ion-item (click)="showDisplayNameDialog()">
+      <h2>表示名</h2>
+      <p>{{displayName}}</p>
+    </button>
+    <button ion-item disabled>
+      <h2>パスワード</h2>
+      <p>******</p>
+    </button>
+    <button ion-item (click)="showMailAddressDialog()">
+      <h2>メールアドレス</h2>
+      <p>{{mailAddress}}</p>
+    </button>
+
+    <ion-list-header>Assign me bots</ion-list-header>
+    <ion-item>
+      <ion-label>お問い合わせ</ion-label>
+      <ion-checkbox item-end checked="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>注文</ion-label>
+      <ion-checkbox item-end checked="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>FAQ</ion-label>
+      <ion-checkbox item-end checked="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>会話</ion-label>
+      <ion-checkbox item-end checked="true"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
