@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
+import { BotPageModule } from '../pages/bot/bot.module';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -17,7 +20,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
+    BotPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

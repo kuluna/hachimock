@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>あいりさん</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngFor="let message of messages" style="margin:16px">
+    <div *ngIf="message.username == 'あなた'; else partner" style="text-align: right">
+      <div style="background-color:#6dc;color:white;border-radius: 6px;padding:8px;font-size:medium">
+        {{message.text}}
+      </div>
+      {{message.time}}
+    </div>
+    <ng-template #partner>
+      <div style="background-color:#ccc;border-radius: 6px;padding:8px;font-size:medium">
+        {{message.text}}
+      </div>
+      {{message.time}}
+    </ng-template>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <form #form="ngForm" (ngSubmit)="sendMessage(form.value.message)">
+    <ion-toolbar>
+      <ion-buttons left>
+          <ion-icon name="add"></ion-icon>
+        
+      </ion-buttons>
+      <ion-item>
+        <ion-input type="text" name="message" placeholder="Enter a message" ngModel></ion-input>
+      </ion-item>
+
+      <ion-buttons end>
+        <button type="submit" ion-button icon-right color="royal">
+          Send
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-buttons>
+    
+    </ion-toolbar>
+  </form>
+</ion-footer>
